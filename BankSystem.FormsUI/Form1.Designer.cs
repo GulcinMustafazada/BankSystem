@@ -64,10 +64,24 @@ namespace BankSystem.FormsUI
             this.lblAgeAdd = new System.Windows.Forms.Label();
             this.lblLastNameAdd = new System.Windows.Forms.Label();
             this.lblFirstNameAdd = new System.Windows.Forms.Label();
+            this.gbxSearch = new System.Windows.Forms.GroupBox();
+            this.lblFirstNameSearch = new System.Windows.Forms.Label();
+            this.tbxFirstNameSearch = new System.Windows.Forms.TextBox();
+            this.lblId = new System.Windows.Forms.Label();
+            this.tbxId = new System.Windows.Forms.TextBox();
+            this.lblLastNameSearch = new System.Windows.Forms.Label();
+            this.tbxLastNameSearch = new System.Windows.Forms.TextBox();
+            this.lblAddressSearch = new System.Windows.Forms.Label();
+            this.tbxAddressSearch = new System.Windows.Forms.TextBox();
+            this.lblPhoneNumberSearch = new System.Windows.Forms.Label();
+            this.tbxPhoneNumberSearch = new System.Windows.Forms.TextBox();
+            this.lblCustomerCodeSearch = new System.Windows.Forms.Label();
+            this.tbxCustomerCodeSearch = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgwCustomers)).BeginInit();
             this.gbxCrud.SuspendLayout();
             this.gbxUpdate.SuspendLayout();
             this.gbxAdd.SuspendLayout();
+            this.gbxSearch.SuspendLayout();
             this.SuspendLayout();
             // 
             // dgwCustomers
@@ -75,9 +89,9 @@ namespace BankSystem.FormsUI
             this.dgwCustomers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgwCustomers.Cursor = System.Windows.Forms.Cursors.Default;
             this.dgwCustomers.GridColor = System.Drawing.SystemColors.Highlight;
-            this.dgwCustomers.Location = new System.Drawing.Point(12, 4);
+            this.dgwCustomers.Location = new System.Drawing.Point(62, 4);
             this.dgwCustomers.Name = "dgwCustomers";
-            this.dgwCustomers.Size = new System.Drawing.Size(713, 147);
+            this.dgwCustomers.Size = new System.Drawing.Size(848, 147);
             this.dgwCustomers.TabIndex = 0;
             this.dgwCustomers.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgwCustomers_CellClick);
             // 
@@ -90,7 +104,7 @@ namespace BankSystem.FormsUI
             this.gbxCrud.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.gbxCrud.Location = new System.Drawing.Point(12, 157);
             this.gbxCrud.Name = "gbxCrud";
-            this.gbxCrud.Size = new System.Drawing.Size(713, 376);
+            this.gbxCrud.Size = new System.Drawing.Size(661, 376);
             this.gbxCrud.TabIndex = 1;
             this.gbxCrud.TabStop = false;
             this.gbxCrud.Text = "Crud";
@@ -125,7 +139,7 @@ namespace BankSystem.FormsUI
             this.gbxUpdate.Controls.Add(this.lblLastNameUpdate);
             this.gbxUpdate.Controls.Add(this.lblFirstNameUpdate);
             this.gbxUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.gbxUpdate.Location = new System.Drawing.Point(373, 28);
+            this.gbxUpdate.Location = new System.Drawing.Point(342, 28);
             this.gbxUpdate.Name = "gbxUpdate";
             this.gbxUpdate.Size = new System.Drawing.Size(295, 303);
             this.gbxUpdate.TabIndex = 1;
@@ -432,12 +446,149 @@ namespace BankSystem.FormsUI
             this.lblFirstNameAdd.TabIndex = 0;
             this.lblFirstNameAdd.Text = "First Name";
             // 
+            // gbxSearch
+            // 
+            this.gbxSearch.Controls.Add(this.tbxCustomerCodeSearch);
+            this.gbxSearch.Controls.Add(this.lblCustomerCodeSearch);
+            this.gbxSearch.Controls.Add(this.tbxPhoneNumberSearch);
+            this.gbxSearch.Controls.Add(this.lblPhoneNumberSearch);
+            this.gbxSearch.Controls.Add(this.tbxAddressSearch);
+            this.gbxSearch.Controls.Add(this.lblAddressSearch);
+            this.gbxSearch.Controls.Add(this.tbxLastNameSearch);
+            this.gbxSearch.Controls.Add(this.lblLastNameSearch);
+            this.gbxSearch.Controls.Add(this.tbxId);
+            this.gbxSearch.Controls.Add(this.lblId);
+            this.gbxSearch.Controls.Add(this.tbxFirstNameSearch);
+            this.gbxSearch.Controls.Add(this.lblFirstNameSearch);
+            this.gbxSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.gbxSearch.Location = new System.Drawing.Point(697, 157);
+            this.gbxSearch.Name = "gbxSearch";
+            this.gbxSearch.Size = new System.Drawing.Size(265, 370);
+            this.gbxSearch.TabIndex = 2;
+            this.gbxSearch.TabStop = false;
+            this.gbxSearch.Text = "Searching";
+            // 
+            // lblFirstNameSearch
+            // 
+            this.lblFirstNameSearch.AutoSize = true;
+            this.lblFirstNameSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblFirstNameSearch.Location = new System.Drawing.Point(18, 89);
+            this.lblFirstNameSearch.Name = "lblFirstNameSearch";
+            this.lblFirstNameSearch.Size = new System.Drawing.Size(82, 20);
+            this.lblFirstNameSearch.TabIndex = 0;
+            this.lblFirstNameSearch.Text = "FirstName";
+            // 
+            // tbxFirstNameSearch
+            // 
+            this.tbxFirstNameSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.tbxFirstNameSearch.Location = new System.Drawing.Point(136, 83);
+            this.tbxFirstNameSearch.Name = "tbxFirstNameSearch";
+            this.tbxFirstNameSearch.Size = new System.Drawing.Size(123, 26);
+            this.tbxFirstNameSearch.TabIndex = 1;
+            this.tbxFirstNameSearch.TextChanged += new System.EventHandler(this.tbxFirstNameSearch_TextChanged);
+            // 
+            // lblId
+            // 
+            this.lblId.AutoSize = true;
+            this.lblId.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblId.Location = new System.Drawing.Point(18, 53);
+            this.lblId.Name = "lblId";
+            this.lblId.Size = new System.Drawing.Size(23, 20);
+            this.lblId.TabIndex = 2;
+            this.lblId.Text = "Id";
+            // 
+            // tbxId
+            // 
+            this.tbxId.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.tbxId.Location = new System.Drawing.Point(136, 47);
+            this.tbxId.Name = "tbxId";
+            this.tbxId.Size = new System.Drawing.Size(123, 26);
+            this.tbxId.TabIndex = 3;
+            this.tbxId.TextChanged += new System.EventHandler(this.tbxId_TextChanged);
+            // 
+            // lblLastNameSearch
+            // 
+            this.lblLastNameSearch.AutoSize = true;
+            this.lblLastNameSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblLastNameSearch.Location = new System.Drawing.Point(18, 121);
+            this.lblLastNameSearch.Name = "lblLastNameSearch";
+            this.lblLastNameSearch.Size = new System.Drawing.Size(82, 20);
+            this.lblLastNameSearch.TabIndex = 4;
+            this.lblLastNameSearch.Text = "LastName";
+            // 
+            // tbxLastNameSearch
+            // 
+            this.tbxLastNameSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.tbxLastNameSearch.Location = new System.Drawing.Point(136, 118);
+            this.tbxLastNameSearch.Name = "tbxLastNameSearch";
+            this.tbxLastNameSearch.Size = new System.Drawing.Size(123, 26);
+            this.tbxLastNameSearch.TabIndex = 5;
+            this.tbxLastNameSearch.TextChanged += new System.EventHandler(this.tbxLastNameSearch_TextChanged);
+            // 
+            // lblAddressSearch
+            // 
+            this.lblAddressSearch.AutoSize = true;
+            this.lblAddressSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblAddressSearch.Location = new System.Drawing.Point(18, 159);
+            this.lblAddressSearch.Name = "lblAddressSearch";
+            this.lblAddressSearch.Size = new System.Drawing.Size(68, 20);
+            this.lblAddressSearch.TabIndex = 6;
+            this.lblAddressSearch.Text = "Address";
+            // 
+            // tbxAddressSearch
+            // 
+            this.tbxAddressSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.tbxAddressSearch.Location = new System.Drawing.Point(136, 153);
+            this.tbxAddressSearch.Name = "tbxAddressSearch";
+            this.tbxAddressSearch.Size = new System.Drawing.Size(123, 26);
+            this.tbxAddressSearch.TabIndex = 7;
+            this.tbxAddressSearch.TextChanged += new System.EventHandler(this.tbxAddressSearch_TextChanged);
+            // 
+            // lblPhoneNumberSearch
+            // 
+            this.lblPhoneNumberSearch.AutoSize = true;
+            this.lblPhoneNumberSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblPhoneNumberSearch.Location = new System.Drawing.Point(6, 198);
+            this.lblPhoneNumberSearch.Name = "lblPhoneNumberSearch";
+            this.lblPhoneNumberSearch.Size = new System.Drawing.Size(115, 20);
+            this.lblPhoneNumberSearch.TabIndex = 8;
+            this.lblPhoneNumberSearch.Text = "Phone Number";
+            // 
+            // tbxPhoneNumberSearch
+            // 
+            this.tbxPhoneNumberSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.tbxPhoneNumberSearch.Location = new System.Drawing.Point(136, 190);
+            this.tbxPhoneNumberSearch.Name = "tbxPhoneNumberSearch";
+            this.tbxPhoneNumberSearch.Size = new System.Drawing.Size(123, 26);
+            this.tbxPhoneNumberSearch.TabIndex = 9;
+            this.tbxPhoneNumberSearch.TextChanged += new System.EventHandler(this.tbxPhoneNumberSearch_TextChanged);
+            // 
+            // lblCustomerCodeSearch
+            // 
+            this.lblCustomerCodeSearch.AutoSize = true;
+            this.lblCustomerCodeSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblCustomerCodeSearch.Location = new System.Drawing.Point(6, 229);
+            this.lblCustomerCodeSearch.Name = "lblCustomerCodeSearch";
+            this.lblCustomerCodeSearch.Size = new System.Drawing.Size(120, 20);
+            this.lblCustomerCodeSearch.TabIndex = 10;
+            this.lblCustomerCodeSearch.Text = "Customer Code";
+            // 
+            // tbxCustomerCodeSearch
+            // 
+            this.tbxCustomerCodeSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.tbxCustomerCodeSearch.Location = new System.Drawing.Point(136, 229);
+            this.tbxCustomerCodeSearch.Name = "tbxCustomerCodeSearch";
+            this.tbxCustomerCodeSearch.Size = new System.Drawing.Size(123, 26);
+            this.tbxCustomerCodeSearch.TabIndex = 11;
+            this.tbxCustomerCodeSearch.TextChanged += new System.EventHandler(this.tbxCustomerCodeSearch_TextChanged);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
-            this.ClientSize = new System.Drawing.Size(737, 545);
+            this.ClientSize = new System.Drawing.Size(974, 545);
+            this.Controls.Add(this.gbxSearch);
             this.Controls.Add(this.gbxCrud);
             this.Controls.Add(this.dgwCustomers);
             this.Cursor = System.Windows.Forms.Cursors.Default;
@@ -450,6 +601,8 @@ namespace BankSystem.FormsUI
             this.gbxUpdate.PerformLayout();
             this.gbxAdd.ResumeLayout(false);
             this.gbxAdd.PerformLayout();
+            this.gbxSearch.ResumeLayout(false);
+            this.gbxSearch.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -491,6 +644,19 @@ namespace BankSystem.FormsUI
         private System.Windows.Forms.Label lblAgeAdd;
         private System.Windows.Forms.Label lblLastNameAdd;
         private System.Windows.Forms.Label lblFirstNameAdd;
+        private System.Windows.Forms.GroupBox gbxSearch;
+        private System.Windows.Forms.TextBox tbxFirstNameSearch;
+        private System.Windows.Forms.Label lblFirstNameSearch;
+        private System.Windows.Forms.TextBox tbxId;
+        private System.Windows.Forms.Label lblId;
+        private System.Windows.Forms.TextBox tbxLastNameSearch;
+        private System.Windows.Forms.Label lblLastNameSearch;
+        private System.Windows.Forms.TextBox tbxCustomerCodeSearch;
+        private System.Windows.Forms.Label lblCustomerCodeSearch;
+        private System.Windows.Forms.TextBox tbxPhoneNumberSearch;
+        private System.Windows.Forms.Label lblPhoneNumberSearch;
+        private System.Windows.Forms.TextBox tbxAddressSearch;
+        private System.Windows.Forms.Label lblAddressSearch;
     }
 }
 

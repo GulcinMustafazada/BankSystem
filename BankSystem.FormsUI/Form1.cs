@@ -111,6 +111,88 @@ namespace BankSystem.FormsUI
             MessageBox.Show("Customer deleted!", "Message:");
             ClearTextboxs();
         }
+
+        private void tbxId_TextChanged(object sender, EventArgs e)
+        {
+            var text = tbxId.Text;
+
+            if (!String.IsNullOrEmpty(text))
+            {
+                List<Customer> results = new List<Customer>();
+                results.Add(_customerService.GetById(Convert.ToInt32(tbxId.Text)));
+                dgwCustomers.DataSource = results;
+
+            }
+            else
+            {
+                LoadCustomers();
+            }
+        }
+
+        private void tbxFirstNameSearch_TextChanged(object sender, EventArgs e)
+        {
+            var text = tbxFirstNameSearch.Text;
+            if(!String.IsNullOrEmpty(text))
+            {
+                dgwCustomers.DataSource = _customerService.GetByLastName(text);
+            }
+            else
+            {
+                LoadCustomers();
+            }
+        }
+
+        private void tbxLastNameSearch_TextChanged(object sender, EventArgs e)
+        {
+            var text = tbxLastNameSearch.Text;
+            if (!String.IsNullOrEmpty(text))
+            {
+                dgwCustomers.DataSource = _customerService.GetByLastName(text);
+            }
+            else
+            {
+                LoadCustomers();
+            }
+        }
+
+        private void tbxAddressSearch_TextChanged(object sender, EventArgs e)
+        {
+            var text = tbxAddressSearch.Text;
+            if (!String.IsNullOrEmpty(text))
+            {
+                dgwCustomers.DataSource = _customerService.GetAddress(text);
+            }
+            else
+            {
+                LoadCustomers();
+            }
+        }
+
+        private void tbxPhoneNumberSearch_TextChanged(object sender, EventArgs e)
+        {
+            var text = tbxPhoneNumberSearch.Text;
+            if(!String.IsNullOrEmpty(text))
+            {
+                dgwCustomers.DataSource = _customerService.GetPhoneNumber(text);
+            }
+            else
+            {
+                LoadCustomers();
+            }
+        }
+
+        private void tbxCustomerCodeSearch_TextChanged(object sender, EventArgs e)
+        {
+            var text = tbxCustomerCodeSearch.Text;
+            if (!String.IsNullOrEmpty(text))
+            {
+                dgwCustomers.DataSource = _customerService.GetCustomerCode(text);
+            }
+            else
+            {
+                LoadCustomers();
+            }
+        }
     }
 }
 

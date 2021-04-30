@@ -31,6 +31,11 @@ namespace BankSystem.Business.Concrete
             return _customerDal.GetAll();
         }
 
+        public List<Customer> GetByFirstName(string FirstName)
+        {
+            return _customerDal.GetAll(c => c.FirstName.ToLower().Contains(FirstName.ToLower()));
+        }
+
         public Customer GetById(int id)
         {
             return _customerDal.Get(c => c.Id == id);
@@ -39,6 +44,26 @@ namespace BankSystem.Business.Concrete
         public void Update(Customer customer)
         {
             _customerDal.Update(customer);
+        }
+
+        public List<Customer> GetByLastName(string LastName)
+        {
+            return _customerDal.GetAll(c => c.LastName.ToLower().Contains(LastName.ToLower()));
+        }
+
+        public List<Customer> GetAddress(string Address)
+        {
+            return _customerDal.GetAll(c => c.Address.ToUpper().Contains(Address.ToUpper()));
+        }
+
+        public List<Customer> GetPhoneNumber(string PhoneNumber)
+        {
+            return _customerDal.GetAll(c => c.PhoneNumber.Contains(PhoneNumber));
+        }
+
+        public List<Customer> GetCustomerCode(string CustomerCode)
+        {
+            return _customerDal.GetAll(c => c.CustomerCode.Contains(CustomerCode));
         }
     }
 }
