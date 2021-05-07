@@ -65,23 +65,35 @@ namespace BankSystem.FormsUI
             this.lblLastNameAdd = new System.Windows.Forms.Label();
             this.lblFirstNameAdd = new System.Windows.Forms.Label();
             this.gbxSearch = new System.Windows.Forms.GroupBox();
-            this.lblFirstNameSearch = new System.Windows.Forms.Label();
-            this.tbxFirstNameSearch = new System.Windows.Forms.TextBox();
-            this.lblId = new System.Windows.Forms.Label();
-            this.tbxId = new System.Windows.Forms.TextBox();
-            this.lblLastNameSearch = new System.Windows.Forms.Label();
-            this.tbxLastNameSearch = new System.Windows.Forms.TextBox();
-            this.lblAddressSearch = new System.Windows.Forms.Label();
-            this.tbxAddressSearch = new System.Windows.Forms.TextBox();
-            this.lblPhoneNumberSearch = new System.Windows.Forms.Label();
-            this.tbxPhoneNumberSearch = new System.Windows.Forms.TextBox();
-            this.lblCustomerCodeSearch = new System.Windows.Forms.Label();
             this.tbxCustomerCodeSearch = new System.Windows.Forms.TextBox();
+            this.lblCustomerCodeSearch = new System.Windows.Forms.Label();
+            this.tbxPhoneNumberSearch = new System.Windows.Forms.TextBox();
+            this.lblPhoneNumberSearch = new System.Windows.Forms.Label();
+            this.tbxAddressSearch = new System.Windows.Forms.TextBox();
+            this.lblAddressSearch = new System.Windows.Forms.Label();
+            this.tbxLastNameSearch = new System.Windows.Forms.TextBox();
+            this.lblLastNameSearch = new System.Windows.Forms.Label();
+            this.tbxId = new System.Windows.Forms.TextBox();
+            this.lblId = new System.Windows.Forms.Label();
+            this.tbxFirstNameSearch = new System.Windows.Forms.TextBox();
+            this.lblFirstNameSearch = new System.Windows.Forms.Label();
+            this.gbxByAge = new System.Windows.Forms.GroupBox();
+            this.lblByAgeMin = new System.Windows.Forms.Label();
+            this.tbxByAgeMin = new System.Windows.Forms.TextBox();
+            this.lblByAgeMax = new System.Windows.Forms.Label();
+            this.tbxByAgeMax = new System.Windows.Forms.TextBox();
+            this.gbxByMoney = new System.Windows.Forms.GroupBox();
+            this.lblByMoneyMin = new System.Windows.Forms.Label();
+            this.tbxByMoneyMin = new System.Windows.Forms.TextBox();
+            this.lblByMoneyMax = new System.Windows.Forms.Label();
+            this.tbxByMoneyMax = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgwCustomers)).BeginInit();
             this.gbxCrud.SuspendLayout();
             this.gbxUpdate.SuspendLayout();
             this.gbxAdd.SuspendLayout();
             this.gbxSearch.SuspendLayout();
+            this.gbxByAge.SuspendLayout();
+            this.gbxByMoney.SuspendLayout();
             this.SuspendLayout();
             // 
             // dgwCustomers
@@ -89,9 +101,9 @@ namespace BankSystem.FormsUI
             this.dgwCustomers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgwCustomers.Cursor = System.Windows.Forms.Cursors.Default;
             this.dgwCustomers.GridColor = System.Drawing.SystemColors.Highlight;
-            this.dgwCustomers.Location = new System.Drawing.Point(62, 4);
+            this.dgwCustomers.Location = new System.Drawing.Point(113, 4);
             this.dgwCustomers.Name = "dgwCustomers";
-            this.dgwCustomers.Size = new System.Drawing.Size(848, 147);
+            this.dgwCustomers.Size = new System.Drawing.Size(843, 147);
             this.dgwCustomers.TabIndex = 0;
             this.dgwCustomers.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgwCustomers_CellClick);
             // 
@@ -104,20 +116,21 @@ namespace BankSystem.FormsUI
             this.gbxCrud.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.gbxCrud.Location = new System.Drawing.Point(12, 157);
             this.gbxCrud.Name = "gbxCrud";
-            this.gbxCrud.Size = new System.Drawing.Size(661, 376);
+            this.gbxCrud.Size = new System.Drawing.Size(661, 413);
             this.gbxCrud.TabIndex = 1;
             this.gbxCrud.TabStop = false;
             this.gbxCrud.Text = "Crud";
             // 
             // btnDelete
             // 
+            this.btnDelete.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.btnDelete.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnDelete.Location = new System.Drawing.Point(274, 337);
+            this.btnDelete.Location = new System.Drawing.Point(272, 342);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(114, 33);
+            this.btnDelete.Size = new System.Drawing.Size(114, 44);
             this.btnDelete.TabIndex = 2;
             this.btnDelete.Text = "Delete";
-            this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.UseVisualStyleBackColor = false;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // gbxUpdate
@@ -148,6 +161,7 @@ namespace BankSystem.FormsUI
             // 
             // btnUpdate
             // 
+            this.btnUpdate.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.btnUpdate.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.btnUpdate.Location = new System.Drawing.Point(102, 260);
@@ -155,7 +169,7 @@ namespace BankSystem.FormsUI
             this.btnUpdate.Size = new System.Drawing.Size(88, 37);
             this.btnUpdate.TabIndex = 15;
             this.btnUpdate.Text = "Update";
-            this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.UseVisualStyleBackColor = false;
             this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // tbxCustomerCodeUpdate
@@ -311,6 +325,7 @@ namespace BankSystem.FormsUI
             // 
             // btnAdd
             // 
+            this.btnAdd.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.btnAdd.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.btnAdd.Location = new System.Drawing.Point(102, 260);
@@ -318,7 +333,7 @@ namespace BankSystem.FormsUI
             this.btnAdd.Size = new System.Drawing.Size(88, 37);
             this.btnAdd.TabIndex = 15;
             this.btnAdd.Text = "Add";
-            this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.UseVisualStyleBackColor = false;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // tbxCustomerCodeAdd
@@ -448,6 +463,9 @@ namespace BankSystem.FormsUI
             // 
             // gbxSearch
             // 
+            this.gbxSearch.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.gbxSearch.Controls.Add(this.gbxByMoney);
+            this.gbxSearch.Controls.Add(this.gbxByAge);
             this.gbxSearch.Controls.Add(this.tbxCustomerCodeSearch);
             this.gbxSearch.Controls.Add(this.lblCustomerCodeSearch);
             this.gbxSearch.Controls.Add(this.tbxPhoneNumberSearch);
@@ -463,105 +481,19 @@ namespace BankSystem.FormsUI
             this.gbxSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.gbxSearch.Location = new System.Drawing.Point(697, 157);
             this.gbxSearch.Name = "gbxSearch";
-            this.gbxSearch.Size = new System.Drawing.Size(265, 370);
+            this.gbxSearch.Size = new System.Drawing.Size(357, 413);
             this.gbxSearch.TabIndex = 2;
             this.gbxSearch.TabStop = false;
             this.gbxSearch.Text = "Searching";
             // 
-            // lblFirstNameSearch
+            // tbxCustomerCodeSearch
             // 
-            this.lblFirstNameSearch.AutoSize = true;
-            this.lblFirstNameSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lblFirstNameSearch.Location = new System.Drawing.Point(18, 89);
-            this.lblFirstNameSearch.Name = "lblFirstNameSearch";
-            this.lblFirstNameSearch.Size = new System.Drawing.Size(82, 20);
-            this.lblFirstNameSearch.TabIndex = 0;
-            this.lblFirstNameSearch.Text = "FirstName";
-            // 
-            // tbxFirstNameSearch
-            // 
-            this.tbxFirstNameSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.tbxFirstNameSearch.Location = new System.Drawing.Point(136, 83);
-            this.tbxFirstNameSearch.Name = "tbxFirstNameSearch";
-            this.tbxFirstNameSearch.Size = new System.Drawing.Size(123, 26);
-            this.tbxFirstNameSearch.TabIndex = 1;
-            this.tbxFirstNameSearch.TextChanged += new System.EventHandler(this.tbxFirstNameSearch_TextChanged);
-            // 
-            // lblId
-            // 
-            this.lblId.AutoSize = true;
-            this.lblId.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lblId.Location = new System.Drawing.Point(18, 53);
-            this.lblId.Name = "lblId";
-            this.lblId.Size = new System.Drawing.Size(23, 20);
-            this.lblId.TabIndex = 2;
-            this.lblId.Text = "Id";
-            // 
-            // tbxId
-            // 
-            this.tbxId.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.tbxId.Location = new System.Drawing.Point(136, 47);
-            this.tbxId.Name = "tbxId";
-            this.tbxId.Size = new System.Drawing.Size(123, 26);
-            this.tbxId.TabIndex = 3;
-            this.tbxId.TextChanged += new System.EventHandler(this.tbxId_TextChanged);
-            // 
-            // lblLastNameSearch
-            // 
-            this.lblLastNameSearch.AutoSize = true;
-            this.lblLastNameSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lblLastNameSearch.Location = new System.Drawing.Point(18, 121);
-            this.lblLastNameSearch.Name = "lblLastNameSearch";
-            this.lblLastNameSearch.Size = new System.Drawing.Size(82, 20);
-            this.lblLastNameSearch.TabIndex = 4;
-            this.lblLastNameSearch.Text = "LastName";
-            // 
-            // tbxLastNameSearch
-            // 
-            this.tbxLastNameSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.tbxLastNameSearch.Location = new System.Drawing.Point(136, 118);
-            this.tbxLastNameSearch.Name = "tbxLastNameSearch";
-            this.tbxLastNameSearch.Size = new System.Drawing.Size(123, 26);
-            this.tbxLastNameSearch.TabIndex = 5;
-            this.tbxLastNameSearch.TextChanged += new System.EventHandler(this.tbxLastNameSearch_TextChanged);
-            // 
-            // lblAddressSearch
-            // 
-            this.lblAddressSearch.AutoSize = true;
-            this.lblAddressSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lblAddressSearch.Location = new System.Drawing.Point(18, 159);
-            this.lblAddressSearch.Name = "lblAddressSearch";
-            this.lblAddressSearch.Size = new System.Drawing.Size(68, 20);
-            this.lblAddressSearch.TabIndex = 6;
-            this.lblAddressSearch.Text = "Address";
-            // 
-            // tbxAddressSearch
-            // 
-            this.tbxAddressSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.tbxAddressSearch.Location = new System.Drawing.Point(136, 153);
-            this.tbxAddressSearch.Name = "tbxAddressSearch";
-            this.tbxAddressSearch.Size = new System.Drawing.Size(123, 26);
-            this.tbxAddressSearch.TabIndex = 7;
-            this.tbxAddressSearch.TextChanged += new System.EventHandler(this.tbxAddressSearch_TextChanged);
-            // 
-            // lblPhoneNumberSearch
-            // 
-            this.lblPhoneNumberSearch.AutoSize = true;
-            this.lblPhoneNumberSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lblPhoneNumberSearch.Location = new System.Drawing.Point(6, 198);
-            this.lblPhoneNumberSearch.Name = "lblPhoneNumberSearch";
-            this.lblPhoneNumberSearch.Size = new System.Drawing.Size(115, 20);
-            this.lblPhoneNumberSearch.TabIndex = 8;
-            this.lblPhoneNumberSearch.Text = "Phone Number";
-            // 
-            // tbxPhoneNumberSearch
-            // 
-            this.tbxPhoneNumberSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.tbxPhoneNumberSearch.Location = new System.Drawing.Point(136, 190);
-            this.tbxPhoneNumberSearch.Name = "tbxPhoneNumberSearch";
-            this.tbxPhoneNumberSearch.Size = new System.Drawing.Size(123, 26);
-            this.tbxPhoneNumberSearch.TabIndex = 9;
-            this.tbxPhoneNumberSearch.TextChanged += new System.EventHandler(this.tbxPhoneNumberSearch_TextChanged);
+            this.tbxCustomerCodeSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.tbxCustomerCodeSearch.Location = new System.Drawing.Point(136, 229);
+            this.tbxCustomerCodeSearch.Name = "tbxCustomerCodeSearch";
+            this.tbxCustomerCodeSearch.Size = new System.Drawing.Size(123, 26);
+            this.tbxCustomerCodeSearch.TabIndex = 11;
+            this.tbxCustomerCodeSearch.TextChanged += new System.EventHandler(this.tbxCustomerCodeSearch_TextChanged);
             // 
             // lblCustomerCodeSearch
             // 
@@ -573,21 +505,212 @@ namespace BankSystem.FormsUI
             this.lblCustomerCodeSearch.TabIndex = 10;
             this.lblCustomerCodeSearch.Text = "Customer Code";
             // 
-            // tbxCustomerCodeSearch
+            // tbxPhoneNumberSearch
             // 
-            this.tbxCustomerCodeSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.tbxCustomerCodeSearch.Location = new System.Drawing.Point(136, 229);
-            this.tbxCustomerCodeSearch.Name = "tbxCustomerCodeSearch";
-            this.tbxCustomerCodeSearch.Size = new System.Drawing.Size(123, 26);
-            this.tbxCustomerCodeSearch.TabIndex = 11;
-            this.tbxCustomerCodeSearch.TextChanged += new System.EventHandler(this.tbxCustomerCodeSearch_TextChanged);
+            this.tbxPhoneNumberSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.tbxPhoneNumberSearch.Location = new System.Drawing.Point(136, 190);
+            this.tbxPhoneNumberSearch.Name = "tbxPhoneNumberSearch";
+            this.tbxPhoneNumberSearch.Size = new System.Drawing.Size(123, 26);
+            this.tbxPhoneNumberSearch.TabIndex = 9;
+            this.tbxPhoneNumberSearch.TextChanged += new System.EventHandler(this.tbxPhoneNumberSearch_TextChanged);
+            // 
+            // lblPhoneNumberSearch
+            // 
+            this.lblPhoneNumberSearch.AutoSize = true;
+            this.lblPhoneNumberSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblPhoneNumberSearch.Location = new System.Drawing.Point(6, 198);
+            this.lblPhoneNumberSearch.Name = "lblPhoneNumberSearch";
+            this.lblPhoneNumberSearch.Size = new System.Drawing.Size(115, 20);
+            this.lblPhoneNumberSearch.TabIndex = 8;
+            this.lblPhoneNumberSearch.Text = "Phone Number";
+            // 
+            // tbxAddressSearch
+            // 
+            this.tbxAddressSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.tbxAddressSearch.Location = new System.Drawing.Point(136, 153);
+            this.tbxAddressSearch.Name = "tbxAddressSearch";
+            this.tbxAddressSearch.Size = new System.Drawing.Size(123, 26);
+            this.tbxAddressSearch.TabIndex = 7;
+            this.tbxAddressSearch.TextChanged += new System.EventHandler(this.tbxAddressSearch_TextChanged);
+            // 
+            // lblAddressSearch
+            // 
+            this.lblAddressSearch.AutoSize = true;
+            this.lblAddressSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblAddressSearch.Location = new System.Drawing.Point(18, 159);
+            this.lblAddressSearch.Name = "lblAddressSearch";
+            this.lblAddressSearch.Size = new System.Drawing.Size(68, 20);
+            this.lblAddressSearch.TabIndex = 6;
+            this.lblAddressSearch.Text = "Address";
+            // 
+            // tbxLastNameSearch
+            // 
+            this.tbxLastNameSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.tbxLastNameSearch.Location = new System.Drawing.Point(136, 118);
+            this.tbxLastNameSearch.Name = "tbxLastNameSearch";
+            this.tbxLastNameSearch.Size = new System.Drawing.Size(123, 26);
+            this.tbxLastNameSearch.TabIndex = 5;
+            this.tbxLastNameSearch.TextChanged += new System.EventHandler(this.tbxLastNameSearch_TextChanged);
+            // 
+            // lblLastNameSearch
+            // 
+            this.lblLastNameSearch.AutoSize = true;
+            this.lblLastNameSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblLastNameSearch.Location = new System.Drawing.Point(18, 121);
+            this.lblLastNameSearch.Name = "lblLastNameSearch";
+            this.lblLastNameSearch.Size = new System.Drawing.Size(82, 20);
+            this.lblLastNameSearch.TabIndex = 4;
+            this.lblLastNameSearch.Text = "LastName";
+            // 
+            // tbxId
+            // 
+            this.tbxId.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.tbxId.Location = new System.Drawing.Point(136, 47);
+            this.tbxId.Name = "tbxId";
+            this.tbxId.Size = new System.Drawing.Size(123, 26);
+            this.tbxId.TabIndex = 3;
+            this.tbxId.TextChanged += new System.EventHandler(this.tbxId_TextChanged);
+            // 
+            // lblId
+            // 
+            this.lblId.AutoSize = true;
+            this.lblId.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblId.Location = new System.Drawing.Point(18, 53);
+            this.lblId.Name = "lblId";
+            this.lblId.Size = new System.Drawing.Size(23, 20);
+            this.lblId.TabIndex = 2;
+            this.lblId.Text = "Id";
+            // 
+            // tbxFirstNameSearch
+            // 
+            this.tbxFirstNameSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.tbxFirstNameSearch.Location = new System.Drawing.Point(136, 83);
+            this.tbxFirstNameSearch.Name = "tbxFirstNameSearch";
+            this.tbxFirstNameSearch.Size = new System.Drawing.Size(123, 26);
+            this.tbxFirstNameSearch.TabIndex = 1;
+            this.tbxFirstNameSearch.TextChanged += new System.EventHandler(this.tbxFirstNameSearch_TextChanged);
+            // 
+            // lblFirstNameSearch
+            // 
+            this.lblFirstNameSearch.AutoSize = true;
+            this.lblFirstNameSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblFirstNameSearch.Location = new System.Drawing.Point(18, 89);
+            this.lblFirstNameSearch.Name = "lblFirstNameSearch";
+            this.lblFirstNameSearch.Size = new System.Drawing.Size(82, 20);
+            this.lblFirstNameSearch.TabIndex = 0;
+            this.lblFirstNameSearch.Text = "FirstName";
+            // 
+            // gbxByAge
+            // 
+            this.gbxByAge.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.gbxByAge.Controls.Add(this.tbxByAgeMax);
+            this.gbxByAge.Controls.Add(this.lblByAgeMax);
+            this.gbxByAge.Controls.Add(this.tbxByAgeMin);
+            this.gbxByAge.Controls.Add(this.lblByAgeMin);
+            this.gbxByAge.Location = new System.Drawing.Point(22, 271);
+            this.gbxByAge.Name = "gbxByAge";
+            this.gbxByAge.Size = new System.Drawing.Size(328, 60);
+            this.gbxByAge.TabIndex = 12;
+            this.gbxByAge.TabStop = false;
+            this.gbxByAge.Text = "Age";
+            // 
+            // lblByAgeMin
+            // 
+            this.lblByAgeMin.AutoSize = true;
+            this.lblByAgeMin.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblByAgeMin.Location = new System.Drawing.Point(26, 28);
+            this.lblByAgeMin.Name = "lblByAgeMin";
+            this.lblByAgeMin.Size = new System.Drawing.Size(38, 22);
+            this.lblByAgeMin.TabIndex = 0;
+            this.lblByAgeMin.Text = "Min";
+            // 
+            // tbxByAgeMin
+            // 
+            this.tbxByAgeMin.BackColor = System.Drawing.SystemColors.Window;
+            this.tbxByAgeMin.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.tbxByAgeMin.Location = new System.Drawing.Point(70, 23);
+            this.tbxByAgeMin.Name = "tbxByAgeMin";
+            this.tbxByAgeMin.Size = new System.Drawing.Size(67, 27);
+            this.tbxByAgeMin.TabIndex = 1;
+            this.tbxByAgeMin.TextChanged += new System.EventHandler(this.tbxByAgeMin_TextChanged);
+            // 
+            // lblByAgeMax
+            // 
+            this.lblByAgeMax.AutoSize = true;
+            this.lblByAgeMax.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblByAgeMax.Location = new System.Drawing.Point(203, 26);
+            this.lblByAgeMax.Name = "lblByAgeMax";
+            this.lblByAgeMax.Size = new System.Drawing.Size(43, 22);
+            this.lblByAgeMax.TabIndex = 2;
+            this.lblByAgeMax.Text = "Max";
+            // 
+            // tbxByAgeMax
+            // 
+            this.tbxByAgeMax.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.tbxByAgeMax.Location = new System.Drawing.Point(252, 23);
+            this.tbxByAgeMax.Name = "tbxByAgeMax";
+            this.tbxByAgeMax.Size = new System.Drawing.Size(70, 27);
+            this.tbxByAgeMax.TabIndex = 3;
+            this.tbxByAgeMax.TextChanged += new System.EventHandler(this.tbxByAgeMax_TextChanged);
+            // 
+            // gbxByMoney
+            // 
+            this.gbxByMoney.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.gbxByMoney.Controls.Add(this.tbxByMoneyMax);
+            this.gbxByMoney.Controls.Add(this.lblByMoneyMax);
+            this.gbxByMoney.Controls.Add(this.tbxByMoneyMin);
+            this.gbxByMoney.Controls.Add(this.lblByMoneyMin);
+            this.gbxByMoney.Location = new System.Drawing.Point(22, 342);
+            this.gbxByMoney.Name = "gbxByMoney";
+            this.gbxByMoney.Size = new System.Drawing.Size(329, 61);
+            this.gbxByMoney.TabIndex = 13;
+            this.gbxByMoney.TabStop = false;
+            this.gbxByMoney.Text = "Money";
+            // 
+            // lblByMoneyMin
+            // 
+            this.lblByMoneyMin.AutoSize = true;
+            this.lblByMoneyMin.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblByMoneyMin.Location = new System.Drawing.Point(26, 29);
+            this.lblByMoneyMin.Name = "lblByMoneyMin";
+            this.lblByMoneyMin.Size = new System.Drawing.Size(38, 22);
+            this.lblByMoneyMin.TabIndex = 0;
+            this.lblByMoneyMin.Text = "Min";
+            // 
+            // tbxByMoneyMin
+            // 
+            this.tbxByMoneyMin.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.tbxByMoneyMin.Location = new System.Drawing.Point(70, 26);
+            this.tbxByMoneyMin.Name = "tbxByMoneyMin";
+            this.tbxByMoneyMin.Size = new System.Drawing.Size(71, 27);
+            this.tbxByMoneyMin.TabIndex = 1;
+            this.tbxByMoneyMin.TextChanged += new System.EventHandler(this.tbxByMoneyMin_TextChanged);
+            // 
+            // lblByMoneyMax
+            // 
+            this.lblByMoneyMax.AutoSize = true;
+            this.lblByMoneyMax.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblByMoneyMax.Location = new System.Drawing.Point(203, 26);
+            this.lblByMoneyMax.Name = "lblByMoneyMax";
+            this.lblByMoneyMax.Size = new System.Drawing.Size(43, 22);
+            this.lblByMoneyMax.TabIndex = 2;
+            this.lblByMoneyMax.Text = "Max";
+            // 
+            // tbxByMoneyMax
+            // 
+            this.tbxByMoneyMax.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.tbxByMoneyMax.Location = new System.Drawing.Point(252, 23);
+            this.tbxByMoneyMax.Name = "tbxByMoneyMax";
+            this.tbxByMoneyMax.Size = new System.Drawing.Size(70, 27);
+            this.tbxByMoneyMax.TabIndex = 3;
+            this.tbxByMoneyMax.TextChanged += new System.EventHandler(this.tbxByMoneyMax_TextChanged);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
-            this.ClientSize = new System.Drawing.Size(974, 545);
+            this.ClientSize = new System.Drawing.Size(1070, 603);
             this.Controls.Add(this.gbxSearch);
             this.Controls.Add(this.gbxCrud);
             this.Controls.Add(this.dgwCustomers);
@@ -603,6 +726,10 @@ namespace BankSystem.FormsUI
             this.gbxAdd.PerformLayout();
             this.gbxSearch.ResumeLayout(false);
             this.gbxSearch.PerformLayout();
+            this.gbxByAge.ResumeLayout(false);
+            this.gbxByAge.PerformLayout();
+            this.gbxByMoney.ResumeLayout(false);
+            this.gbxByMoney.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -657,6 +784,16 @@ namespace BankSystem.FormsUI
         private System.Windows.Forms.Label lblPhoneNumberSearch;
         private System.Windows.Forms.TextBox tbxAddressSearch;
         private System.Windows.Forms.Label lblAddressSearch;
+        private System.Windows.Forms.GroupBox gbxByAge;
+        private System.Windows.Forms.TextBox tbxByAgeMax;
+        private System.Windows.Forms.Label lblByAgeMax;
+        private System.Windows.Forms.TextBox tbxByAgeMin;
+        private System.Windows.Forms.Label lblByAgeMin;
+        private System.Windows.Forms.GroupBox gbxByMoney;
+        private System.Windows.Forms.TextBox tbxByMoneyMax;
+        private System.Windows.Forms.Label lblByMoneyMax;
+        private System.Windows.Forms.TextBox tbxByMoneyMin;
+        private System.Windows.Forms.Label lblByMoneyMin;
     }
 }
 

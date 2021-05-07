@@ -193,6 +193,59 @@ namespace BankSystem.FormsUI
                 LoadCustomers();
             }
         }
+
+        private void tbxByAgeMin_TextChanged(object sender, EventArgs e)
+        {
+            LoadByAge();
+        }
+
+        private void tbxByAgeMax_TextChanged(object sender, EventArgs e)
+        {
+            LoadByAge();
+        }
+        private void LoadByAge()
+        {
+            
+            int min = _customerService.GetMinAge();
+            int max = _customerService.GetMaxAge();
+            var minAge = tbxByAgeMin.Text;
+            if (!String.IsNullOrEmpty(minAge))
+            {
+                min = Convert.ToInt32(minAge);
+            }
+            var maxAge = tbxByAgeMax.Text;
+            if(!String.IsNullOrEmpty(maxAge))
+            {
+                max = Convert.ToInt32(maxAge);
+            }
+            dgwCustomers.DataSource = _customerService.GetByAge(min, max);
+        }
+
+        private void tbxByMoneyMin_TextChanged(object sender, EventArgs e)
+        {
+            LoadByMoney();
+        }
+
+        private void tbxByMoneyMax_TextChanged(object sender, EventArgs e)
+        {
+            LoadByMoney();
+        }
+        private void LoadByMoney()
+        {
+            decimal min = _customerService.GetMinMoney();
+            decimal max = _customerService.GetMaxMoney();
+            var minMoney = tbxByMoneyMin.Text;
+            if(!String.IsNullOrEmpty(minMoney))
+            {
+                min = Convert.ToDecimal(minMoney);
+            }
+            var maxMoney = tbxByMoneyMax.Text;
+            if(!String.IsNullOrEmpty(maxMoney))
+            {
+                max = Convert.ToDecimal(maxMoney);
+            }
+            dgwCustomers.DataSource = _customerService.GetByMoney(min, max);
+        }
     }
 }
 

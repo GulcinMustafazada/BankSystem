@@ -1,4 +1,5 @@
-﻿using BankSystem.Entities.Concrete;
+﻿using BankSystem.DataAccess.Concrete.EntityFramework.Mapping;
+using BankSystem.Entities.Concrete;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
@@ -15,5 +16,13 @@ namespace BankSystem.DataAccess.Concrete.EntityFramework
         public DbSet<Director> Directors { get; set; }
         public DbSet<Loan> Loans { get; set; }
 
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            modelBuilder.Configurations.Add(new CustomerMap());
+            modelBuilder.Configurations.Add(new EmployeeMap());
+            modelBuilder.Configurations.Add(new DirectorMap());
+            modelBuilder.Configurations.Add(new LoanMap());
+        }
     }
+
 }

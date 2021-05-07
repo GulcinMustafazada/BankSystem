@@ -60,6 +60,10 @@
     <Compile Include="Concrete\EntityFramework\EfCustomerDal.cs" />
     <Compile Include="Concrete\EntityFramework\EfDirectorDal.cs" />
     <Compile Include="Concrete\EntityFramework\EfEmployeeDal.cs" />
+    <Compile Include="Concrete\EntityFramework\Mapping\CustomerMap.cs" />
+    <Compile Include="Concrete\EntityFramework\Mapping\DirectorMap.cs" />
+    <Compile Include="Concrete\EntityFramework\Mapping\EmployeeMap.cs" />
+    <Compile Include="Concrete\EntityFramework\Mapping\LoanMap.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />

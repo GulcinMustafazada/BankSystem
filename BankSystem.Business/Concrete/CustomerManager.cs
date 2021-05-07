@@ -65,5 +65,34 @@ namespace BankSystem.Business.Concrete
         {
             return _customerDal.GetAll(c => c.CustomerCode.Contains(CustomerCode));
         }
+        public List<Customer> GetByAge(int min, int max)
+        {
+            return _customerDal.GetAll(c => c.Age >= min & c.Age <= max);
+        }
+
+        public int GetMinAge()
+        {
+            return _customerDal.GetAll().Select(c => c.Age).Min();
+        }
+
+        public int GetMaxAge()
+        {
+            return _customerDal.GetAll().Select(c => c.Age).Max();
+        }
+
+        public List<Customer> GetByMoney(decimal min, decimal max)
+        {
+            return _customerDal.GetAll(c => c.Money >= min & c.Money <= max);
+        }
+
+        public decimal GetMaxMoney()
+        {
+            return _customerDal.GetAll().Select(c => c.Money).Max();
+        }
+
+        public decimal GetMinMoney()
+        {
+            return _customerDal.GetAll().Select(c => c.Money).Min();
+        }
     }
 }
