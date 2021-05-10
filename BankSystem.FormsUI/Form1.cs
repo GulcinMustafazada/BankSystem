@@ -1,5 +1,6 @@
 ﻿using BankSystem.Business.Abstract;
 using BankSystem.Business.Concrete;
+using BankSystem.Business.DependencyResolvers.Ninject;
 using BankSystem.DataAccess.Concrete.EntityFramework;
 using BankSystem.Entities.Concrete;
 using System;
@@ -19,7 +20,7 @@ namespace BankSystem.FormsUI
         private ICustomerService _customerService;
         public Form1()
         {
-            _customerService = new CustomerManager(new EfCustomerDal());
+            _customerService = InstanceFactory.GetInstance<ICustomerService>();
             InitializeComponent();
         }
 
