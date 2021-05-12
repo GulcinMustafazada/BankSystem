@@ -1,6 +1,8 @@
 ﻿using BankSystem.Business.Abstract;
+using BankSystem.Business.CrossCuttingConcerns.Validation.FluentValidation;
 using BankSystem.DataAccess.Abstract;
 using BankSystem.Entities.Concrete;
+using Core.CrossCuttingConcerns.Validation.FluentValidation;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,6 +20,7 @@ namespace BankSystem.Business.Concrete
         }
         public void Add(Customer customer)
         {
+            ValidatorTool.FluentValidate(new CustomerValidator(), customer);
             _customerDal.Add(customer);
         }
 
@@ -43,6 +46,7 @@ namespace BankSystem.Business.Concrete
 
         public void Update(Customer customer)
         {
+            ValidatorTool.FluentValidate(new CustomerValidator(), customer);
             _customerDal.Update(customer);
         }
 
