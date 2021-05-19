@@ -2,6 +2,7 @@
 using BankSystem.Business.CrossCuttingConcerns.Validation.FluentValidation;
 using BankSystem.DataAccess.Abstract;
 using BankSystem.Entities.Concrete;
+using Core.Aspects.Postsharp.Transaction;
 using Core.CrossCuttingConcerns.Validation.FluentValidation;
 using System;
 using System.Collections.Generic;
@@ -18,12 +19,13 @@ namespace BankSystem.Business.Concrete
         {
             _customerDal = customerDal;
         }
+        [TransactionAspect]
         public void Add(Customer customer)
         {
             ValidatorTool.FluentValidate(new CustomerValidator(), customer);
             _customerDal.Add(customer);
         }
-
+        [TransactionAspect]
         public void Delete(Customer customer)
         {
             _customerDal.Delete(customer);
@@ -43,7 +45,7 @@ namespace BankSystem.Business.Concrete
         {
             return _customerDal.Get(c => c.Id == id);
         }
-
+        [TransactionAspect]
         public void Update(Customer customer)
         {
             ValidatorTool.FluentValidate(new CustomerValidator(), customer);
